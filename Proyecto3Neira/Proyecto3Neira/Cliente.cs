@@ -8,16 +8,31 @@ namespace Proyecto3Neira
 {
     public class Cliente : Persona
     {
-        
+        Random rdn = new Random();
         private int money;
         private int frequency;
+        private List<Producto> productoscliente;
+
 
         public Cliente(string name, string surname, string bday, string nation, string sex, int age, string rut, int money,int frequency) : base (name,surname,bday,nation,sex,age,rut)
         {
             this.money = money;
             this.frequency = frequency;
+            productoscliente = new List<Producto>();
+        }
+        public int GetMoney()
+        {
+            return money;
         }
         //Comprar
+        public void PrintList()
+        {
+            foreach (Producto p in productoscliente)
+            {
+                Console.WriteLine(p.InfoProd());
+            }
+        }
+            
 
         public override void Info()
         {
@@ -40,33 +55,73 @@ namespace Proyecto3Neira
             }
             int numclient = 1;
             foreach (Cliente cliente in c1)
-            Console.WriteLine("Client {1}: "+cliente.GetName()+" has {0}USD on the wallet",money, numclient);
-
-
-
-
-
-            Console.WriteLine(p.InfoProd());
-            Console.WriteLine("How much of {0} do you want to buy");
-            int a = Convert.ToInt32(Console.ReadLine());
-            int stock = p.GetStockProd();
-            int moneyprod = p.GetPriceProd();
-            if (stock >= a && money >= moneyprod )
             {
+                Console.WriteLine("Client {1}: " + cliente.GetName() + " has {0} USD on the wallet", cliente.GetMoney(), numclient);
+                foreach (Producto producto in p1)
+                {
+                    Console.WriteLine("Name: "+producto.GetNameProd() + " Cost: "+producto.GetPriceProd() + " Stock available: "+producto.GetStockProd());
+                    Console.WriteLine("Want this product? ['yes' or 'no']");
+                    string comprar = Console.ReadLine();
+                    if (comprar == "yes")
+                    {
+                        int stk = producto.GetStockProd();
+                        Console.WriteLine("Hoy much?");
+                        int cantidad = Convert.ToInt32(Console.ReadLine());
+                        int costT = producto.GetStockProd() * cantidad;
+                        if (cantidad<=stk && money >= costT)
+                        {
 
-                r.AddProduct(p);
-                p.LessStock(a);
-                c.LessMoney(p.GetPriceProd());
-                Console.WriteLine("Product {0} was added to cart");
+                            productoscliente.Add(producto);
+                            cliente.LessMoney(costT);
+                        }
+                        else if (cantidad>= stk)
+                        {
+                            Console.WriteLine("Not enough stock.");
+                        }
+                        else if (money <= costT)
+                        {
+                            Console.WriteLine("Not enough money.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Wrong data.");
+                        }
+                    }
+                }
+
             }
-            else if (stock <= a)
+            int c = 0;
+            Console.WriteLine("Now it will show every payment of the clients");
+            string nombreempleado = "";
+            foreach (Cliente cliente2 in c1)
             {
-                Console.WriteLine("Not enough of stock!");
+                Console.WriteLine("Name: " + cliente2.GetName() + " Bought: ");
+                cliente2.PrintList();
+                Console.WriteLine("Has {0}USD on the wallet now", cliente2.GetMoney());
+                foreach (Empleado ee in e1)
+                {
+                    bool a = ee.Askbox();
+                    if (a == true)
+                    {
+                        string abc = ee.GetName();
+                        nombreempleado =abc;
+                        c += 1;
+                    }
+                }
+                double sumweight = 0;
+                Console.WriteLine("At the box {0}, attended by {1}",rdn.Next(1, c), nombreempleado);
+                foreach(Producto p in cliente2.productoscliente)
+                {
+                    double y=p.GetWeightProd();
+                    sumweight += y;
+                }
+                if (sumweight >= 350)
+                {
+                    Console.WriteLine(cliente2.GetName()+" Have used more than 1 shopping car");
+                }
+                Console.WriteLine("Shopping car weights: {0}",sumweight);
             }
-            else
-            {
-                Console.WriteLine("No money enough you need {0} and have {1}",moneyprod,money);
-            }
+
         }
     }
 

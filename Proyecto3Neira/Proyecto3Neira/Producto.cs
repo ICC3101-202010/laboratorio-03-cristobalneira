@@ -54,6 +54,5 @@ namespace Proyecto3Neira
         {
             return namep;
         }
- 
     }
 }

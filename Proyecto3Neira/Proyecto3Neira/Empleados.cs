@@ -164,6 +164,17 @@ namespace Proyecto3Neira
             base.Info();
             Console.WriteLine("Job: {0}, Salary {1}USD, Hour work arrival: {2}, Hour work gone: {3}",job,salary,hrI,hrF);
         }
+        public bool Askbox()
+        {
+            if (job == "box")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         
     }
 }

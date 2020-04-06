@@ -11,6 +11,7 @@ namespace Proyecto3Neira
         public static void Main(string[] args)
         {
             Registro r = new Registro();
+            Cliente unusedclient = new Cliente("","","","","",0,"",0,0);
             DateTime now = DateTime.Now;
             string[] months = {"January", "February", "March", "April", "May",
                     "June", "July", "September", "October", "November", "December"};
@@ -23,7 +24,8 @@ namespace Proyecto3Neira
             Console.WriteLine("Remember: ¡Your shopping cart can`t weight more than 350 Lbs!"); int a = 2;
             do
             {
-                Console.WriteLine("0 for exit, 1 create customer, 2 create employe, 3 create product, 4 buy products, 5 recept for every client.");
+                Console.WriteLine("0 for exit, 1 create customer, 2 create employe, 3 create product, 4 buy products and get receipt for every client.");
+                Console.WriteLine("[Extra] 5 change hour of an employee, 6 change job of an employee, 7 change salary of an employee.");
                 int quest = Convert.ToInt32(Console.ReadLine());
                 //Create customer
                 if (quest == 1)
@@ -89,7 +91,7 @@ namespace Proyecto3Neira
                 else if (quest == 3)
                 {
                     Console.WriteLine("You want to create a Product: ");
-                    Console.WriteLine("ItÌs name?");
+                    Console.WriteLine("It`s name?");
                     string namep = Console.ReadLine();
                     Console.WriteLine("It`s price? [1-1000]");
                     int pricep = Convert.ToInt32(Console.ReadLine());
@@ -110,13 +112,36 @@ namespace Proyecto3Neira
                         r.SeeProducts();
                     }
                 }
-                //Buy
+                //Buy & receipt
                 else if (quest == 4)
                 {
+                    unusedclient.Buy(r);
                 }
-                //Recepit
+
                 else if (quest == 5)
                 {
+                    foreach (Empleado p in r.ListEmployee())
+                    {
+                        p.Askhr(p);
+                    }
+
+
+                }
+                else if (quest == 6)
+                {
+                    foreach (Empleado p in r.ListEmployee())
+                    {
+                        p.Askjob(p);
+                    }
+
+                }
+                else if (quest == 7)
+                {
+                    foreach (Empleado p in r.ListEmployee())
+                    {
+                        p.Asksalary(p);
+                    }
+
                 }
                 else
                 {

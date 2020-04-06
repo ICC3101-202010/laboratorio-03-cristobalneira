@@ -30,18 +30,18 @@ namespace Proyecto3Neira
         }
         public void SeeClients()
         {
-                int c = 1;
-                foreach (Cliente cliente in clientes)
-                {
-                    Console.WriteLine("Customer nº{0}:", c);
-                    c += 1;
-                    cliente.Info();
-                }
-                if (c == 1)
-                {
-                    Console.WriteLine("Program does not have clients.");
-                }
-        
+            int c = 1;
+            foreach (Cliente cliente in clientes)
+            {
+                Console.WriteLine("Customer nº{0}:", c);
+                c += 1;
+                cliente.Info();
+            }
+            if (c == 1)
+            {
+                Console.WriteLine("Program does not have clients.");
+            }
+
         }
         public List<Cliente> ListClient()
         {
@@ -57,35 +57,35 @@ namespace Proyecto3Neira
         }
         public void SeeEmployees()
         {
-                int c = 1;
-                foreach (Empleado empleado in empleados)
-                {
-                    Console.WriteLine("Employee nº{0}:", c);
-                    c += 1;
-                    empleado.Info();
-                }
-                if (c == 1)
-                {
-                    Console.WriteLine("Program does not have employees.");
-                }
-            
-          
+            int c = 1;
+            foreach (Empleado empleado in empleados)
+            {
+                Console.WriteLine("Employee nº{0}:", c);
+                c += 1;
+                empleado.Info();
+            }
+            if (c == 1)
+            {
+                Console.WriteLine("Program does not have employees.");
+            }
+
+
         }
         public void SeeProducts()
         {
 
-                int c = 1;
-                foreach (Producto producto in productos)
-                {
-                    Console.WriteLine("Product nº{0}:",c);
-                    c += 1;
-                    producto.InfoProd();
-                }
-                if (c == 1)
-                {
-                    Console.WriteLine("Program does not have products.");
-                }
-            
+            int c = 1;
+            foreach (Producto producto in productos)
+            {
+                Console.WriteLine("Product nº{0}:", c);
+                c += 1;
+                Console.WriteLine(producto.InfoProd()); 
+            }
+            if (c == 1)
+            {
+                Console.WriteLine("Program does not have products.");
+            }
+
         }
     }
 
