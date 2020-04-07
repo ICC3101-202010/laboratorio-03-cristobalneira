@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 public class Persona
 {
-    private string name;
-    private string surname;
-    private string bday;
-    private string nation;
-    private string sex;
+    protected string name;
+    protected string surname;
+    protected string bday;
+    protected string nation;
+    protected string sex;
     private int age;
     protected string rut;
-
     public Persona(string name,string surname,string bday,string nation, string sex, int age, string rut)
     {
         this.name = name;
@@ -32,4 +31,6 @@ public class Persona
     {
         return name+ " " + surname;
     }
+
+    
 }

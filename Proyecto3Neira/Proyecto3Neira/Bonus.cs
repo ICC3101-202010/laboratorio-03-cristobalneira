@@ -1,53 +1,8 @@
 ﻿using System;
 namespace Proyecto3Neira
-{ }
-//    public class Bonus
-//    {
-//        public Bonus()
-//        {
-//        }
-//        Persona :
-//        atribut
-//        string[] nombresH = { "Elvis", "Armando", "Esteban" };
-//        string[] nombresM = { "Elba", "Debora", "Elsa" };
-//        string[] surnamesH = { "Tek", "Casas", "Dido" };
-//        string[] surnamesM = { "Laso", "Zurita", "Melo", "Polindo", "Pallo", "Mocha" };
-//        string[] months = {"January", "February", "March", "April", "May",
-//    "June", "July", "August","September", "October", "November", "December"};
-//        string[] nations = { "Haiti", "Chile", "Venezuela", "Peru", "Colombia", "Niger", "Madagascar", "China" };
-//        string[] sexs = { "Male", "Female" };
-//        //RUTS,AGES faltan
-//        constructor
+{
 
-//        sex = sexs[rdn.Next(0, 2)];
-//        if (sex == "Male")
-//        {
-//            name = nombresH[rdn.Next(0, 3)];
-//            surname = surnamesH[rdn.Next(0, 3)];
-//        }
-//        else
-//        {
-//            name = nombresM[rdn.Next(0, 3)];
-//            surname = surnamesM[rdn.Next(0, 6)];
-//        }
-//nation = nations[rdn.Next(0, 6)];
-//        age = rdn.Next(12, 85);
-//        string a1 = Convert.ToString(rdn.Next(0, 10));
-//string a2 = Convert.ToString(rdn.Next(0, 10));
-//string a3 = Convert.ToString(rdn.Next(0, 10));
-//string a4 = Convert.ToString(rdn.Next(0, 10));
-//string a5 = Convert.ToString(rdn.Next(0, 10));
-//string a6 = Convert.ToString(rdn.Next(0, 10));
-//string a7 = Convert.ToString(rdn.Next(0, 10));
-//string a8 = Convert.ToString(rdn.Next(0, 10));
-//string a9 = Convert.ToString(rdn.Next(0, 10));
-//string b = Convert.ToString(rdn.Next(1, 3));
-
-//rut = b + a1 + "." + a2 + a3 + a4 + "." + a5 + a6 + a7 + "-" + a8;
-//        bday = Convert.ToString(rdn.Next(0, 3)) +a9 + " of " + months[rdn.Next(0, 12)];
-//    }
-//}
-
+}
 
 //Cliente c1 = new Cliente("Jeremy", "Gonzalez", "16 of April", "Chile", "Male", 21, "20.071244-0", 1000, 4);
 //Empleado e1 = new Empleado("Jaime", "Molina", "20 of September", "España", "Male", 40, "10.450.333-6", "segurity");

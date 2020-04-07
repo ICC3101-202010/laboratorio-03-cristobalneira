@@ -22,14 +22,15 @@ namespace Proyecto3Neira
             this.weight = weight;
             this.type= type;
         }
+
         public string InfoProd()
         {
             return "Name: "+namep+", Price: "+price+", Mark "+mark+", Stock: "+stock+", Weight (lb): "+weight+", Type: "+type;
         }
         public void LessStock(int a)
-            {
+        {
                 stock -= a;
-            }
+        }
         public string GetNameProd()
         {
             return namep;
@@ -54,5 +55,5 @@ namespace Proyecto3Neira
         {
             return namep;
         }
-    }
+    } 
 }

@@ -86,11 +86,11 @@ namespace Proyecto3Neira
         public void Askjob(Persona p)
         {
             string name = p.GetName();
-            Console.WriteLine("Do you want to  " + name + "change job?  ['yes' or 'no']");
+            Console.WriteLine("Do you want to  " + name + " change job?  ['yes' or 'no']");
             string a = Console.ReadLine();
             if (a == "yes")
             {
-                Console.WriteLine("Which one? [cleaning, segurity, box, staff, supervisor, assistant, bos]");
+                Console.WriteLine("Which one? ['cleaning', 'segurity', 'box', 'staff', 'supervisor', 'assistant', 'bos']");
                 string b = Console.ReadLine();
 
                 if (job == b)
@@ -174,7 +174,6 @@ namespace Proyecto3Neira
             {
                 return false;
             }
-        }
-        
+        }  
     }
 }

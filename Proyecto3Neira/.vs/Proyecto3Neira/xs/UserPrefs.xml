@@ -1,21 +1,20 @@
 ﻿<Properties StartupConfiguration="{3407F079-F80E-40C7-B872-3DF6E6558B5C}|Default">
   <MonoDevelop.Ide.ItemProperties.Proyecto3Neira PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Proyecto3Neira/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Proyecto3Neira/Registro.cs">
     <Files>
-      <File FileName="Proyecto3Neira/Persona.cs" Line="27" Column="31" />
-      <File FileName="Proyecto3Neira/Cliente.cs" Line="11" Column="35" />
-      <File FileName="Proyecto3Neira/Empleados.cs" Line="68" Column="14" />
-      <File FileName="Proyecto3Neira/Producto.cs" Line="57" Column="1" />
-      <File FileName="Proyecto3Neira/Registro.cs" Line="58" Column="35" />
-      <File FileName="Proyecto3Neira/Bonus.cs" Line="34" Column="34" />
-      <File FileName="Proyecto3Neira/Program.cs" Line="35" Column="55" />
+      <File FileName="Proyecto3Neira/Persona.cs" />
+      <File FileName="Proyecto3Neira/Cliente.cs" Line="145" Column="46" />
+      <File FileName="Proyecto3Neira/Empleados.cs" Line="167" Column="29" />
+      <File FileName="Proyecto3Neira/Producto.cs" Line="58" Column="5" />
+      <File FileName="Proyecto3Neira/Program.cs" Line="13" Column="127" />
+      <File FileName="Proyecto3Neira/Registro.cs" Line="50" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Proyecto3Neira" expanded="True">
             <Node name="Proyecto3Neira" expanded="True">
-              <Node name="Program.cs" selected="True" />
+              <Node name="Registro.cs" selected="True" />
             </Node>
           </Node>
         </State>
